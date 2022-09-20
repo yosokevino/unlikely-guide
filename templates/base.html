@@ -1,51 +1,79 @@
 <!DOCTYPE html>
 <html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <title>Unlikely Guides</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
 
-</head>
-
-<body>
-
-    <div class="container-fluid">
-
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-              <img src="/static/images/climber.png" width="30" height="30" class="d-inline-block align-top" alt="">
-              Welcome to Unlikely Guides
-            </a>
-          </nav>
-
-            {% block index %}
-            {% endblock %}
-
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar sticky-top navbar-expand-xl navbar-dark" style="background-color: lightgreen;">
+            <a class="navbar-brand" href="/" style="color: black;"><b>Unlikely Guides</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </ul>
+            </div> 
+        </nav>
+        <div id="amazontop" class="container">
+            <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=288&l=ur1&category=amazonfashion&banner=0TZ9JY8VCY3R51XPP8G2&f=ifr&linkID=4360a928610bad14a9073f835f63008f&t=unlikelyguide-20&tracking_id=unlikelyguide-20" width="320" height="50" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
         </div>
-    
-    <footer>
-        <div class="alignleft">
-            <script type="text/javascript">
-                amzn_assoc_ad_type = "banner";
-        amzn_assoc_marketplace = "amazon";
-        amzn_assoc_region = "US";
-        amzn_assoc_placement = "assoc_banner_placement_default";
-        amzn_assoc_campaigns = "primediscounted";
-        amzn_assoc_banner_type = "category";
-        amzn_assoc_isresponsive = "true";
-        amzn_assoc_banner_id = "1AG4FHSFVC0413XG7902";
-        amzn_assoc_tracking_id = "unlikelyguide-20";
-        amzn_assoc_linkid = "561606bcdc79d59b3f6bc8f35fb4982e";
-            </script>
-            <script src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1"></script>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="amazonleft" class="col-auto"  style="padding-top:20px;">
+                    <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=14&l=ur1&category=health&banner=04RCED2A4DKFEWNNRFR2&f=ifr&linkID=d9c9f82e5498f33a414d734567f9214d&t=unlikelyguide-20&tracking_id=unlikelyguide-20" width="160" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>                </div>
+                <div class="col col-xl" style="padding:0px">
+                    {% block index %}
+                    {% endblock %}
+                    {% block toaster_oven %}
+                    {% endblock %}
+                </div>
+                <div id="amazonright" class="col-auto" style="padding-top:20px;">
+                    <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=14&l=ur1&category=amazonfashion&banner=0AG50GY6P3KKHK2XTM02&f=ifr&linkID=560f39ab1a241e37b7dcb68846b5f2b2&t=unlikelyguide-20&tracking_id=unlikelyguide-20" width="160" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+                </div>
+            </div>
         </div>
-    </footer>
-</div>
-</body>
+        <footer style="bottom:0;left:0;right:0;height:30px;background-color:lightgreen; z-index: 1;">
+            <center>
+                <div class="container">
+                    <p>Copyright &copy; 2022.
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="color: black;" target="_blank"><b>Unlikely Guides.</b></a>
+                    All Rights Reserved.</p>
+              </div>
+            </center>
+        </footer>
+    <script>
+$(document).ready(function () {
 
+if (screen.width < 1024) {
+    $("#amazonleft").hide();
+    $("#amazonright").hide();
+    $("#amazontop").show();
+    amazontop
+}
+else {
+    $("#amazonleft").show();
+    $("#amazonright").show();
+    $("#amazontop").hide();
+}
+
+});
+    </script>
+
+    </body>
+    </html>
 </html>
